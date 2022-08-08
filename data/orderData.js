@@ -1,0 +1,42 @@
+export const OrderData = {
+  orders: [
+    {
+      id: "1",
+      name: "Lenovo Yoga",
+      model: "U76789I3HE",
+      image: ["../assets/products/1646_Lenovo-Yoga-3-Pro-Repair_1.jpg", "../assets/products/lenoYOGApro3_2.jpg"],
+      price: "120,000",
+      quantityInStock: "24",
+      condition: "New",
+      availability: "In stock",
+      brand: "Lenovo",
+    },
+    {
+      id: "2",
+      name: "Macbook 2021 M1",
+      model: "U76789I3HE",
+      image: ["../assets/products/macbook2.png", "../assets/products/macbook1.jpeg"],
+      price: "682,000",
+      quantityInStock: "0",
+      condition: "USED",
+      availability: "In stock",
+      brand: "Apple",
+    },
+    {
+      id: "3",
+      name: "DELL Inspiron",
+      model: "U76789I3HE",
+      image: [
+        "../assets/products/Dell-Inspiron-15-5000-5558-Silver-Version.jpg",
+        "../assets/products/1525204196_635_latitude-3450.png",
+      ],
+      initialPrice: "280,000",
+      price: "250,000",
+      rating: "5",
+      quantityInStock: "34",
+      condition: "New",
+      availability: "In stock",
+      brand: "Dell",
+    },
+  ],
+};
