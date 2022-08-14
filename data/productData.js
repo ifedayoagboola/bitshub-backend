@@ -29,7 +29,7 @@ const ProductData = {
       price: "682,000",
       rating: "5",
       initialPrice: "685,000",
-      quantityInStock: "0",
+      quantityInStock: 0,
       config: "256GB SSD/ 8GB RAM, intel core i9, 2.43 GHz processor speed...",
       brief:
         "The Macbook 2021 M1 13.3 (2GB RAM, 500GB HDD) Laptop is a sleek lightweight laptop that delivers value at an amazing price. Running on Windows 10 and equipped with a 2GHz Quad-Core processor, the Viao 13.3 Laptop is your best bet for work and entertainment. Get the Sony Vaio Laptop online from Jumia at the best price in Nigeria",
@@ -53,7 +53,7 @@ const ProductData = {
       initialPrice: "280,000",
       price: "250,000",
       rating: 2.5,
-      quantityInStock: "34",
+      quantityInStock: 34,
       config: "256GB SSD/ 8GB RAM, intel core i9, 2.43 GHz processor speed...",
       brief:
         "The Dell Inspiron (2GB RAM, 500GB HDD) Laptop is a sleek lightweight laptop that delivers value at an amazing price. Running on Windows 10 and equipped with a 2GHz Quad-Core processor, the Viao 13.3 Laptop is your best bet for work and entertainment. Get the Sony Vaio Laptop online from Jumia at the best price in Nigeria",
@@ -74,7 +74,7 @@ const ProductData = {
       price: "400,000",
       rating: "5",
       initialPrice: "480,000",
-      quantityInStock: "15",
+      quantityInStock: 15,
       config: "256GB SSD/ 8GB RAM, intel core i9, 2.43 GHz processor speed...",
       brief:
         "The HP Envy (16GB RAM, 1TB SSD) Laptop is a sleek lightweight laptop that delivers value at an amazing price. Running on Windows 10 and equipped with a 2GHz Quad-Core processor, the Viao 13.3 Laptop is your best bet for work and entertainment. Get the Sony Vaio Laptop online from Jumia at the best price in Nigeria",
@@ -98,7 +98,7 @@ const ProductData = {
       price: "172,500",
       rating: 2,
       initialPrice: "175,000",
-      quantityInStock: "17",
+      quantityInStock: 17,
       config: "256GB SSD/ 8GB RAM, intel core i9, 2.43 GHz processor speed...",
       brief:
         "The Lenovo ThinkPad (8GB RAM, 512GB SSD) Laptop is a sleek lightweight laptop that delivers value at an amazing price. Running on Windows 10 and equipped with a 2GHz Quad-Core processor, the Viao 13.3 Laptop is your best bet for work and entertainment. Get the Sony Vaio Laptop online from Jumia at the best price in Nigeria",
@@ -119,7 +119,7 @@ const ProductData = {
       price: "95,000",
       rating: 1.5,
       initialPrice: "98,000",
-      quantityInStock: "0",
+      quantityInStock: 0,
       config: "256GB SSD/ 8GB RAM, intel core i9, 2.43 GHz processor speed...",
       brief:
         "The Toshiba Satelite Laptop is a sleek lightweight laptop that delivers value at an amazing price. Running on Windows 10 and equipped with a 2GHz Quad-Core processor, the Viao 13.3 Laptop is your best bet for work and entertainment. Get the Sony Vaio Laptop online from Jumia at the best price in Nigeria",
