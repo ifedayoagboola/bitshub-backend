@@ -1,8 +1,8 @@
 import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import ProductData from "./data/productData.js";
 import userRouter from "./routers/userRouter.js";
+import productRouter from "./routers/productRouter.js";
 
 dotenv.config();
 const uri = process.env.MONGODB_URI;
@@ -16,16 +16,9 @@ mongoose
   });
 
 const app = express();
-app.get("/api/products/:id", (req, res) => {
-  const product = ProductData?.products?.find((item) => item.id === Number(req.params.id));
-  if (product) {
-    res.send(product);
-  } else res.status(404).send({ message: "Product not found!" });
-});
-app.get("/api/products", (req, res) => {
-  res.send(ProductData?.products);
-});
+
 app.use("/api/users", userRouter);
+app.use("/api/products", productRouter);
 app.get("/", (req, res) => {
   res.send("server is ready");
 });

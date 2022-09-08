@@ -16,10 +16,9 @@ const ProductData = {
   ],
   products: [
     {
-      id: 1,
       name: "Lenovo Yoga",
       model: "U76789I3HE",
-      image: ["../assets/products/1646_Lenovo-Yoga-3-Pro-Repair_1.jpg", "../assets/products/lenoYOGApro3_2.jpg"],
+      // image: ["../assets/products/1646_Lenovo-Yoga-3-Pro-Repair_1.jpg", "../assets/products/lenoYOGApro3_2.jpg"],
       price: 120000,
       rating: 1.5,
       initialPrice: "124,000",
@@ -37,10 +36,9 @@ const ProductData = {
       brand: "Lenovo",
     },
     {
-      id: 2,
       name: "Macbook 2021 M1",
       model: "U76789I3HE",
-      image: ["../assets/products/macbook2.png", "../assets/products/macbook1.jpeg"],
+      // image: ["../assets/products/macbook2.png", "../assets/products/macbook1.jpeg"],
       price: 682000,
       rating: "5",
       initialPrice: "685,000",
@@ -58,13 +56,12 @@ const ProductData = {
       brand: "Apple",
     },
     {
-      id: 3,
       name: "DELL Inspiron",
       model: "U76789I3HE",
-      image: [
-        "../assets/products/Dell-Inspiron-15-5000-5558-Silver-Version.jpg",
-        "../assets/products/1525204196_635_latitude-3450.png",
-      ],
+      // image: [
+      //   "../assets/products/Dell-Inspiron-15-5000-5558-Silver-Version.jpg",
+      //   "../assets/products/1525204196_635_latitude-3450.png",
+      // ],
       initialPrice: "280,000",
       price: 250000,
       rating: 2.5,
@@ -82,10 +79,9 @@ const ProductData = {
       brand: "Dell",
     },
     {
-      id: 4,
       name: "HP Envy",
       model: "U76789I3HE",
-      image: ["../assets/products/HPENVYx360m6__2_.jpg", "../assets/products/csm_MG_2838_354458139a.jpg"],
+      // image: ["../assets/products/HPENVYx360m6__2_.jpg", "../assets/products/csm_MG_2838_354458139a.jpg"],
       price: 400000,
       rating: "5",
       initialPrice: "480,000",
@@ -103,13 +99,12 @@ const ProductData = {
       brand: "Hp",
     },
     {
-      id: 5,
       name: "Lenovo Thinkpad",
       model: "U76789I3HE",
-      image: [
-        "../assets/products/A60G_131554151661089309JJQPvR7NVX.jpg",
-        "../assets/products/csm_MG_2838_354458139a.jpg",
-      ],
+      // image: [
+      //   "../assets/products/A60G_131554151661089309JJQPvR7NVX.jpg",
+      //   "../assets/products/csm_MG_2838_354458139a.jpg",
+      // ],
       price: 172500,
       rating: 2,
       initialPrice: "175,000",
@@ -127,10 +122,9 @@ const ProductData = {
       brand: "Lenovo",
     },
     {
-      id: 6,
       name: "Acer Aspire",
       model: "U76789I3HE",
-      image: ["../assets/products/acer.jpg"],
+      // image: ["../assets/products/acer.jpg"],
       price: 95000,
       rating: 1.5,
       initialPrice: "98,000",
