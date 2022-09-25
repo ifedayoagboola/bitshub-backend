@@ -6,16 +6,22 @@ import productRouter from "./routers/productRouter.js";
 
 dotenv.config();
 const uri = process.env.MONGODB_URI;
+const port = process.env.PORT || 4000;
+const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 mongoose
   .connect(uri)
   .then(() => {
     console.log("connected to db");
+    app.listen(port, () => {
+      console.log(`serve at http://localhost:${port}`);
+    });
   })
   .catch((err) => {
     console.log(err.message);
   });
-
-const app = express();
 
 app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
@@ -24,8 +30,4 @@ app.get("/", (req, res) => {
 });
 app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });
-});
-const port = process.env.PORT || 4000;
-app.listen(port, () => {
-  console.log(`serve at http://localhost:${port}`);
 });
