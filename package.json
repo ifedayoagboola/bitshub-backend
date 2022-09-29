@@ -5,7 +5,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon --watch backend --exec node --experimental-modules server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
