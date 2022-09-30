@@ -12,7 +12,15 @@ const port = process.env.PORT || 4000;
 const app = express();
 
 app.use(express.json());
-app.use(cors({ origin: "*", credentials: true }));
+app.use(
+  cors({
+    origin: [
+      "https://bitshub-d9veaka51-ifedayoagboola.vercel.app/",
+      "https://bitshub.vercel.app/",
+    ],
+    credentials: true,
+  })
+);
 app.use(express.urlencoded({ extended: true }));
 
 mongoose
