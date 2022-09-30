@@ -1,11 +1,15 @@
 {
-  "name": "backend",
+  "name": "bitshub-backend",
   "type": "module",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "start": "nodemon --watch backend --exec node --experimental-modules server.js"
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ifedayoagboola/bitshub-backend.git"
   },
   "author": "Ifedayo",
   "license": "ISC",
@@ -17,7 +21,11 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.5.4"
   },
-  "devDependencies": {
+   "devDependencies": {
     "nodemon": "^2.0.19"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/ifedayoagboola/bitshub-backend/issues"
+  },
+  "homepage": "https://github.com/ifedayoagboola/bitshub-backend#readme"
 }
