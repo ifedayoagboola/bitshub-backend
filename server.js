@@ -25,7 +25,7 @@ mongoose
     console.log(err.message);
   });
 
-app.use(cors());
+app.use(cors({ origin: "*", credentials: true }));
 app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
 app.get("/", (req, res) => {
