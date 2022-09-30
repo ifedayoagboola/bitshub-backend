@@ -10,6 +10,8 @@ const uri = process.env.MONGODB_URI;
 const port = process.env.PORT || 4000;
 const app = express();
 const cors = cors();
+
+app.use(cors({ origin: "*", credentials: true }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -25,7 +27,7 @@ mongoose
     console.log(err.message);
   });
 
-app.use(cors({ origin: "*", credentials: true }));
+
 app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
 app.get("/", (req, res) => {
