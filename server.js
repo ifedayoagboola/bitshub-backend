@@ -7,12 +7,12 @@ import productRouter from "./routers/productRouter.js";
 
 
 dotenv.config();
-const cors = cors();
 const uri = process.env.MONGODB_URI;
 const port = process.env.PORT || 4000;
 const app = express();
 
 app.use(express.json());
+app.use(cors({ origin: "*", credentials: true }));
 app.use(express.urlencoded({ extended: true }));
 
 mongoose
