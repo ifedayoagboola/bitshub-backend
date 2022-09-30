@@ -16,7 +16,8 @@ app.use(
   cors({
     origin: [
       "http://localhost:3000",
-      "https://bitshub.vercel.app/", https://bitshub-d9veaka51-ifedayoagboola.vercel.app/
+      "https://bitshub.vercel.app/",
+      "https://bitshub-d9veaka51-ifedayoagboola.vercel.app/"
     ],
     credentials: true,
   })
