@@ -14,7 +14,7 @@ const app = express();
 app.use(express.json());
 app.use(
   cors({
-    origin: {"https://bitshub.vercel.app/"},
+    origin: "https://bitshub.vercel.app/",
     credentials: true,
   })
 );
