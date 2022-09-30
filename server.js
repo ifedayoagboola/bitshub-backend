@@ -16,7 +16,7 @@ app.use(
   cors({
     allowedHeaders: ["sessionId", "Content-Type", "Authorization", "authorization"],
     exposedHeaders: ["sessionId"],
-    origin: ["https://localhost:3000", "https://bitshub.vercel.app/"],
+    origin: ["http://localhost:3000", "https://bitshub-d9veaka51-ifedayoagboola.vercel.app/"],
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
     preflightContinue: false,
