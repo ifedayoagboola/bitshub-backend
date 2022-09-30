@@ -12,7 +12,6 @@ const app = express();
 const cors = cors();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
 
 mongoose
   .connect(uri)
@@ -26,6 +25,7 @@ mongoose
     console.log(err.message);
   });
 
+app.use(cors());
 app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
 app.get("/", (req, res) => {
