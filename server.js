@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(
   cors({
     origin: [
-      "https://bitshub-d9veaka51-ifedayoagboola.vercel.app/",
+      "http://localhost:3000",
       "https://bitshub.vercel.app/",
     ],
     credentials: true,
