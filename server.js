@@ -12,16 +12,17 @@ const app = express();
 const cors = cors();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(
-  cors({
-    allowedHeaders: ["sessionId", "Content-Type", "Authorization", "authorization"],
-    exposedHeaders: ["sessionId"],
-    origin: ["http://localhost:3000", "https://bitshub-d9veaka51-ifedayoagboola.vercel.app/"],
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    credentials: true,
-    preflightContinue: false,
-  })
-);
+app.use(cors());
+// app.use(
+//   cors({
+//     allowedHeaders: ["sessionId", "Content-Type", "Authorization", "authorization"],
+//     exposedHeaders: ["sessionId"],
+//     origin: ["http://localhost:3000", "https://bitshub-d9veaka51-ifedayoagboola.vercel.app/"],
+//     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+//     credentials: true,
+//     preflightContinue: false,
+//   })
+// );
 
 mongoose
   .connect(uri)
