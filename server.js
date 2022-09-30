@@ -3,13 +3,25 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import userRouter from "./routers/userRouter.js";
 import productRouter from "./routers/productRouter.js";
+import cors from "cors";
 
 dotenv.config();
 const uri = process.env.MONGODB_URI;
 const port = process.env.PORT || 4000;
 const app = express();
+const cors = cors();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(
+  cors({
+    allowedHeaders: ["sessionId", "Content-Type", "Authorization", "authorization"],
+    exposedHeaders: ["sessionId"],
+    origin: ["https://localhost:3000", "https://bitshub.vercel.app/"],
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true,
+    preflightContinue: false,
+  })
+);
 
 mongoose
   .connect(uri)
