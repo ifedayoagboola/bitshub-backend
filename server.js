@@ -3,16 +3,16 @@ import mongoose from "mongoose";
 import dotenv from "dotenv";
 import userRouter from "./routers/userRouter.js";
 import productRouter from "./routers/productRouter.js";
-import cors from "cors";
+// import cors from "cors";
 
 dotenv.config();
 const uri = process.env.MONGODB_URI;
 const port = process.env.PORT || 4000;
 const app = express();
-const cors = cors();
+// const cors = cors();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors());
+// app.use(cors());
 
 mongoose
   .connect(uri)
