@@ -13,6 +13,9 @@
   },
   "author": "Ifedayo",
   "license": "ISC",
+   "engines": {
+    "node": "16.15.0"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
