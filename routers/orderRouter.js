@@ -17,9 +17,10 @@ orderRouter.post(
         shippingDetails: req.body.shippingDetails,
         paymentMethod: req.body.paymentMethod,
         itemsPrice: req.body.itemsPrice,
-        // shippingPrice: req.body.shippingPrice,
-        // taxPrice: req.body.taxPrice,
-        // totalPrice: req.body.totalPrice,
+        isPaid: req.body.isPaid,
+        PaidAt: req.body.PaidAt,
+        isDelivered: req.body.isDelivered,
+        deliveredAt: req.body.deliveredAt,
         user: req.user._id,
       });
       const createdOrder = await order.save();
@@ -27,4 +28,31 @@ orderRouter.post(
     }
   })
 );
+
+orderRouter.get(
+  "/",
+  isAuth,
+  expressAsyncHandler(async (req, res) => {
+    const orders = await Order.find({});
+    if (orders) {
+      res.send(orders);
+    } else {
+      res.status(404).send({ message: "product not found" });
+    }
+  })
+);
+
+orderRouter.get(
+  "/:id",
+  isAuth,
+  expressAsyncHandler(async (req, res) => {
+    const order = await Order.findById(req.params.id);
+    if (order) {
+      res.send(order);
+    } else {
+      res.status(404).send({ message: "product not found" });
+    }
+  })
+);
+
 export default orderRouter;
