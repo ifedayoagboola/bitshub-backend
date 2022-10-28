@@ -28,6 +28,7 @@ const orderSchema = new mongoose.Schema(
       totalPrice: { type: Number, required: true },
     },
     paymentMethod: { type: String, required: true },
+    paymentResult: { id: String, status: String, update_time: String, email_address: String },
     itemsPrice: { type: Number, required: false },
 
     user: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
