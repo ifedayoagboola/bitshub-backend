@@ -5,6 +5,19 @@ import { isAuth } from "../utils.js";
 
 const orderRouter = express.Router();
 
+orderRouter.get(
+  "/mine",
+  isAuth,
+  expressAsyncHandler(async (req, res) => {
+    const orders = await Order.find({ user: req.user._id });
+    if (orders) {
+      res.send(orders);
+    } else {
+      res.status(404).send({ message: "product not found" });
+    }
+  })
+);
+
 orderRouter.post(
   "/",
   isAuth,
@@ -25,19 +38,6 @@ orderRouter.post(
       });
       const createdOrder = await order.save();
       res.status(201).send({ message: "New order created", order: createdOrder });
-    }
-  })
-);
-
-orderRouter.get(
-  "/",
-  isAuth,
-  expressAsyncHandler(async (req, res) => {
-    const orders = await Order.find({});
-    if (orders) {
-      res.send(orders);
-    } else {
-      res.status(404).send({ message: "product not found" });
     }
   })
 );
