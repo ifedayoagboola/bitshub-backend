@@ -13,7 +13,11 @@ const port = process.env.PORT || 4000;
 const app = express();
 
 const corsOptions = {
-  origin: "http://localhost:3000",
+  origin: [
+    "http://localhost:3000",
+    "https://bitshub-admin.vercel.app/",
+    "https://bitshub.vercel.app/",
+  ],
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };
