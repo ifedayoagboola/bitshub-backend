@@ -11,15 +11,10 @@ dotenv.config();
 const uri = process.env.MONGODB_URI;
 const port = process.env.PORT || 4000;
 const app = express();
-
-const whitelist = [
-  "http://localhost:3000",
-  "https://bitshub-admin.vercel.app",
-  "https://bitshub.vercel.app",
-];
 const corsOptions = {
     origin: [
     "http://localhost:3000",
+    "http://localhost:3001",
     "https://bitshub-admin.vercel.app",
     "https://bitshub.vercel.app",
   ],
