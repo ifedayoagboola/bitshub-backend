@@ -45,7 +45,7 @@ productRouter.post(
       color: req.body.color,
       reviews: req.body.reviews,
       brand: req.body.brand,
-      id: req.user._id,
+      // id: req.user._id,
     });
     const createdProduct = await product.save();
     res
@@ -91,7 +91,7 @@ productRouter.put(
       product.color = req.body.color || product.color;
       product.reviews = req.body.reviews || product.reviews;
       product.brand = req.body.brand || product.brand;
-      user = req.user._id;
+      // user = req.user._id;
 
       const updatedProduct = await product.save();
       res
