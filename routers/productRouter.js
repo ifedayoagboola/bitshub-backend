@@ -65,4 +65,40 @@ productRouter.get(
     }
   })
 );
+
+productRouter.put(
+  "/:id/update",
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    const product = await Product.findById(req.params.id);
+    if (product) {
+      product.name = req.body.name || product.name;
+      product.image = req.body.image || product.image;
+      product.model = req.body.model || product.model;
+      product.price = req.body.price || product.price;
+      product.rating = req.body.rating || product.rating;
+      product.initialPrice = req.body.initialPrice || product.initialPrice;
+      product.quantityInStock =
+        req.body.quantityInStock || product.quantityInStock;
+      product.config = req.body.config || product.config;
+      product.brief = req.body.brief || product.brief;
+      product.desc = req.body.desc || product.desc;
+      product.condition = req.body.condition || product.condition;
+      product.availability = req.body.availability || product.availability;
+      product.category = req.body.category || product.category;
+      product.size = req.body.size || product.size;
+      product.color = req.body.color || product.color;
+      product.reviews = req.body.reviews || product.reviews;
+      product.brand = req.body.brand || product.brand;
+
+      const updatedProduct = await product.save();
+      res
+        .status(201)
+        .send({ message: "Product Updated", product: updatedProduct });
+    } else {
+      res.status(404).send({ message: "product Not Found" });
+    }
+  })
+);
 export default productRouter;
