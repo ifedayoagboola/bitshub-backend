@@ -8,7 +8,6 @@ import orderRouter from "./routers/orderRouter.js";
 import uploadRouter from "./routers/uploadRouter.js";
 
 dotenv.config();
-// const cors = require("cors");
 const uri = process.env.MONGODB_URI;
 const port = process.env.PORT || 4000;
 const app = express();
