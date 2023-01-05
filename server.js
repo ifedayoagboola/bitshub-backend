@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 import userRouter from "./routers/userRouter.js";
 import productRouter from "./routers/productRouter.js";
 import orderRouter from "./routers/orderRouter.js";
+import uploadRouter from "./routers/uploadRouter.js";
 
 dotenv.config();
 // const cors = require("cors");
@@ -12,7 +13,7 @@ const uri = process.env.MONGODB_URI;
 const port = process.env.PORT || 4000;
 const app = express();
 const corsOptions = {
-    origin: [
+  origin: [
     "http://localhost:3000",
     "http://localhost:3001",
     "https://bitshub-admin.vercel.app",
@@ -40,6 +41,7 @@ mongoose
 
 app.use("/api/users", userRouter);
 app.use("/api/products", productRouter);
+app.use("/api/upload", uploadRouter);
 app.use("/api/orders", orderRouter);
 app.get("/", (req, res) => {
   res.send("server is ready");
