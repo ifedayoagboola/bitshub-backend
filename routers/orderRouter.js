@@ -1,9 +1,19 @@
 import express from "express";
 import expressAsyncHandler from "express-async-handler";
 import Order from "../models/orderModel.js";
-import { isAuth } from "../utils.js";
+import { isAdmin, isAuth } from "../utils.js";
 
 const orderRouter = express.Router();
+
+orderRouter.get(
+  "/",
+  isAuth,
+  isAdmin,
+  expressAsyncHandler(async (req, res) => {
+    const orders = await Order.find().populate("user", "name");
+    res.send(orders);
+  })
+);
 
 orderRouter.get(
   "/mine",
@@ -37,7 +47,9 @@ orderRouter.post(
         user: req.user._id,
       });
       const createdOrder = await order.save();
-      res.status(201).send({ message: "New order created", order: createdOrder });
+      res
+        .status(201)
+        .send({ message: "New order created", order: createdOrder });
     }
   })
 );
