@@ -10,7 +10,7 @@ orderRouter.get(
   isAuth,
   isAdmin,
   expressAsyncHandler(async (req, res) => {
-    const orders = await Order.find().populate("user", "name");
+    const orders = await Order.find().populate("user");
     res.send(orders);
   })
 );
@@ -58,7 +58,7 @@ orderRouter.get(
   "/:id",
   isAuth,
   expressAsyncHandler(async (req, res) => {
-    const order = await Order.findById(req.params.id);
+    const order = await Order.findById(req.params.id).populate("user");
     if (order) {
       res.send(order);
     } else {
